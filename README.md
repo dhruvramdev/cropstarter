@@ -1,5 +1,4 @@
 ## CropStarter
---
 
 1. CropStarter is a Blockchain based crowd funding platform that connects anyone to help finance our farmers.
 2. We aim to improve the income and productivity of our farmers through crowd funding.
