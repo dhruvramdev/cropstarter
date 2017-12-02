@@ -1,0 +1,54 @@
+<div class="container pages">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+
+      <div class="content-frame padding-sm center">
+        <h4 class="text-color-2 margin-t">Investing in</h4>
+        <h2 class="text-color-4 margin-tb-sm">{{user.name}}'s Farm</h2>
+        <hr>
+        <h3 class="text-color-2 margin-tb">Choose amount to pledge</h3>
+        <div class="amountDiv center">
+          <span class="text-color-2 text-light text-md">₹</span><span id="i-amount">5000</span>
+        </div>
+        <br>
+        <form class="form-signin form-style" role="form" action="/farms/145/invest" method="post">
+          <div class="form-group">
+            <input type="range" class="input-1 margin-tb-sm center" value="5000" min="5000" max="50000" step="5000" id="i-slider" name="amount" style="position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0;"><div class="rangeslider rangeslider--horizontal" id="js-rangeslider-0"><div class="rangeslider__fill" style="width: 20px;"></div><div class="rangeslider__handle" style="left: 0px;"></div></div>
+          </div>
+          <table class="invoice">
+            <tbody><tr>
+              <td><h4 class="text-color-2 center">Payment Breakdown</h4></td>
+            </tr>
+            <tr>
+              <td>
+                <table class="invoice-items" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td>Actual Amount Invested <br class="mobile-on">to the Farm</td>
+                    <td class="alignright">₹ <span id="amt-actual">4750</span></td>
+                  </tr>
+                  <tr>
+                    <td>Insurance Fee <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="This helps us with the platform's operation costs"></span></td>
+                    <td class="alignright">₹ <span id="amt-fee">250</span></td>
+                  </tr>
+                  <tr class="total">
+                    <td class="alignright" width="80%">Total</td>
+                    <td class="alignright">₹ <span id="amt-total">5000</span></td>
+                  </tr>
+                  </tbody></table>
+              </td>
+            </tr>
+            </tbody></table>
+          <br><br>
+          <button class="btn btn-lg btn-1 btn-block text-spacing ts" type="submit">COMMIT</button><br>
+          <p class="text-color-2 lh-xs">By pledging, you certify that you are of Indian legal age (18 years old and above) and agree to ourterms &amp; conditions.</p>
+        </form>
+      </div>
+      <div class="content-frame-footer">
+        <p><strong><a href="/farms/{{user.farm_id}}" class="text-color-4">Back</a></strong>
+        </p></div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+<app-footer></app-footer>

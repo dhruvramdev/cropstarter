@@ -1,0 +1,108 @@
+
+<div class="container pages-md center">
+  <h2 class="text-color-4">Browsing Farms</h2>
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-inline" role="form" action="#" method="get">
+        <div class="col-xs-12 padding-l">
+          <input type="hidden" class="form-control input-2" value="short" name="type">
+          <div class="mobile-off">
+            <div class="form-group">
+              <input type="text" class="form-control input-2" placeholder="Search for description, location, crops" name="keyword">
+              <button type="submit" class="btn btn-1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="cbox">
+                    <input type="checkbox" id="show-previous" class="input-cb" name="show_previous"> <span>Show previous farms <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Farms that have been fully-funded and finished the harvest cycle"></span></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group" style="margin-top: 15px;">
+                    <select id="browse-returns" name="returns" class="form-control" style="border-color: #036564;">
+                      <option value="">Choose from type of returns</option>
+                      <option value="profit-share">Profit-sharing</option>
+                      <option value="fixed-rate">Fixed Returns</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div id="browse-note" class="browse-note text-light hide">
+                  <em><p class="text-color-2 note">Now click <i class="fa fa-search" aria-hidden="true"></i> to proceed with search.</p></em>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-on">
+            <div class="form-group">
+              <input type="text" class="form-control input-2" placeholder="Search for description, location, crops" name="keyword_m">
+              <div class="form-group" style="margin-top: 15px;">
+                <select name="returns_m" class="form-control input-2">
+                  <option value="">Choose from type of returns</option>
+                  <option value="profit-share">Profit-sharing</option>
+                  <option value="fixed-rate">Fixed Returns</option>
+                </select>
+              </div>
+              <div class="cbox">
+                <input type="checkbox" id="show-previous" class="input-cb" name="show_previous"> <span>Show previous farms <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Farms that have been fully-funded and finished the harvest cycle"></span></span>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-1">SEARCH</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="container marketing">
+  <div class="row">
+
+    <div class="col-lg-4" *ngFor="let farm of farms">
+      <div class="top-cat center">
+        <p><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> {{farm.crop}}</p>
+      </div>
+      <div class="thumbnail-frame">
+        <a routerLink="/farms/{{farm.farm_id}}"><img class="full-image" src="assets/images/farmers/8e066d4f-9bf0-494f-8962-ae2a0da658fb-47602771_s.jpg" alt="Mang Crisaldo&#39;s Farm"></a>
+        <a routerLink="/farms/{{farm.farm_id}}"><h3 class="text-color-4">{{farm.name}}'s Farm
+
+        </h3></a>
+        <div class="text-center">
+          <p class="t-location text-sm text-color-2">{{farm.area}}, {{farm.state}}</p>
+        </div>
+
+        <div class="highlight-line-green">
+
+          <div class="row center high-row">
+            <div class="col-md-12 col-xs-12">
+              <p class="raised-text">₹ {{farm.pledged}} RAISED <span class="progress-text">({{farm.pledged / farm.requirement * 100 | number }}%)<span></span></span></p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <div *ngIf="farm.pledged == farm.requirement">
+          <p class="center text-md text-color-2 text-left"><span class="text-color-4">Hooray!</span> We made it!</p>
+          <br>
+          <p><a class="btn btn-2" routerLink="/farms/{{farm.farm_id}}" role="button">THIS FARM IS FULLY FUNDED</a></p>
+          <br>
+
+        </div>
+        <div *ngIf="farm.pledged != farm.requirement">
+          <p class="center text-md text-color-4 text-left">₹ {{farm.pledged}} <span class="text-color-2">from</span> {{farm.investors}} <span class="text-color-2">pledges</span> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pledges are commitments from users with interest in investing."></span></p>
+
+          <br>
+          <p><a class="btn btn-2" routerLink="/farms/{{farm.farm_id}}" role="button">PLEDGE - 5 DAYS LEFT</a></p>
+          <br>
+
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<app-footer></app-footer>

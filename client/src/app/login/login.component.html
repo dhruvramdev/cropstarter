@@ -1,0 +1,39 @@
+<div class="container pages">
+  <div class="col-md-3">
+
+  </div>
+  <div class="col-md-6">
+    <div class="content-frame">
+      <h2 class="text-color-4">Welcome back!</h2>
+
+      <form class="form-signin form-style" #f="ngForm" (ngSubmit)="submit(f.value)">
+        <div class="alert alert-error" *ngIf="errmsg">
+          {{errmsg}}
+        </div>
+        <div class="form-group float-label-control">
+
+          <input ngModel type="email" class="form-control empty" placeholder="Email Address" name="email">
+          <label for="">Email Address</label>
+        </div>
+        <div class="form-group float-label-control">
+
+          <input ngModel type="password" class="form-control empty" placeholder="Password" name="password">
+          <label for="">Password</label>
+        </div>
+        <button class="btn btn-lg btn-1 btn-block" type="submit">Log me in!</button>
+        <br>
+      </form>
+    </div>
+    <div class="content-frame-footer">
+      <p>New to Cropital? <strong><a href="https://www.cropital.com/user/register"
+                                     class="text-color-4">Register</a></strong>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-3">
+
+  </div>
+</div>
+
+<app-footer></app-footer>
+

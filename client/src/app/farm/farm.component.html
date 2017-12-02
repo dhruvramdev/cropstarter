@@ -1,0 +1,273 @@
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--<br>-->
+<!--{{ user | json }}-->
+
+<div class="modal fade" id="risk">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+        </button>
+        <h3 class="modal-title text-color-4 center">Risk-acceptance Agreement</h3>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-10 text-color-2">
+            <br>
+            <p>It is a fact that there are risks involved in farming. This is where the core business of Cropital comes
+              in, providing structures that reduces risks and increases profitability.</p>
+            <br>
+            <p>By clicking agree, I hereby acknowledge and accept that I might incur losses due to the following
+              risks:</p>
+            <ol>
+              <li>Non-repayment or Payment Default</li>
+            </ol>
+            <br>
+            <p>Cropital plays a part in reducing the risks in farming, to protect you as our investors and the farmers.
+              Learn more about how we manage risks <a href="https://www.cropital.com/learn/risk-management-structure"
+                                                      target="_blank">here</a>.</p>
+            <br>
+            <div class="modal-footer">
+              <button class="btn btn-2" data-dismiss="modal">Cancel</button>
+              <a href="https://www.cropital.com/farms/178/invest">
+                <button class="btn btn-1">AGREE</button>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pages-md"></div>
+<br>
+<div class="container marketing">
+  <div class="row">
+    <div class="col-lg-4 mcard">
+      <div class="top-cat center">
+        <p><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> {{user.crop}}
+
+        </p></div>
+      <div class="thumbnail-frame">
+        <a href="https://www.cropital.com/farms/178"><img class="full-image"
+                                                          src="assets/images/farmers/8e066d4f-9bf0-494f-8962-ae2a0da658fb-47602771_s.jpg"
+                                                          alt="{{user.name}}&#39;s Farm"></a>
+        <a href="https://www.cropital.com/farms/178"><h3 class="text-color-4">{{user.name}}'s Farm
+
+        </h3></a>
+        <div class="text-center">
+          <p class="t-location text-sm text-color-2">{{user.area}}, {{user.state}}</p>
+        </div>
+
+        <div class="highlight-line-green">
+
+          <div class="row center high-row">
+            <div class="col-md-12 col-xs-12">
+              <p class="raised-text">₹ {{user.pledged}} RAISED <span class="progress-text">({{user.pledged / user.requirement * 100 | number }}%)<span></span></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+
+
+        <br>
+        <div *ngIf="user.pledged != user.requirement">
+          <p class="center text-md text-color-4 text-left">₹ 5,000 <span class="text-color-2">from</span> 1 <span
+            class="text-color-2">pledges</span> <span class="glyphicon glyphicon-question-sign" aria-hidden="true"
+                                                      data-toggle="tooltip" data-placement="top" title=""
+                                                      data-original-title="Pledges are commitments from users with interest in investing."></span>
+          </p>
+          <a class="btn btn-2" href="#" role="button">PLEDGE - 5 DAYS LEFT</a>
+
+        </div>
+        <div *ngIf="user.pledged == user.requirement">
+          <p class="center text-md text-color-2 text-left"><span class="text-color-4">Hooray!</span> We made it!</p>
+
+          <p>
+            <a class="btn btn-2" role="button" disabled="">THIS FARM IS FULLY FUNDED</a>
+          </p>
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+
+    <div class="col-lg-8 mcard">
+
+      <div class="thumbnail-frame mcontent">
+        <div class="row" *ngIf="user.pledged != user.requirement">
+          <div class="col-md-12 incontent center">
+            <img class="icon margin-t-lg" src="assets/images/support.png" height="60px">
+            <h3 class="text-color-4">Support {{user.name}}'s Farm</h3>
+            <p><a class="btn btn-2 text-spacing btn-lg" id="risk-link" role="button" routerLink="/farms/{{user.farm_id}}/buy">MAKE A PLEDGE</a></p>
+            <br>
+            <div class="footer-social-icons">
+              <div class="text-strikethru">
+                <div class="line"></div>
+                <div class="text">Together, we can make this happen. <br>Help us spread the word by sharing!<br
+                  class="mobile-off"> #PossibleTogether
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="user.pledged == user.requirement">
+          <div class="col-md-12 incontent center">
+            <img class="icon margin-t-lg" src="assets/images/insurance/rewards.png" height="80px">
+            <h3 class="text-color-4">Way to go! We have fully-funded this farm!</h3>
+            <p class="text-color-2">Sending our warm appreciation to our pioneer investors who made this happen!</p>
+            <br>
+            <p><a class="btn btn-2 text-spacing btn-lg btn-wrap" href="https://www.cropital.com/farms/browse"
+                  role="button">SUPPORT FARMS TODAY →</a></p>
+            <br>
+            <div class="footer-social-icons">
+              <div class="text-strikethru">
+                <div class="line"></div>
+                <div class="text">Share the good news!</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <br>
+      </div>
+
+      <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="https://www.cropital.com/farms/178#details"
+                                                    aria-controls="home" role="tab" data-toggle="tab">Details</a></li>
+          <li role="presentation"><a href="https://www.cropital.com/farms/178#updates" aria-controls="updates"
+                                     role="tab" data-toggle="tab">Farm Status</a></li>
+          <li role="presentation"><a href="https://www.cropital.com/farms/178#harvest" aria-controls="harvest"
+                                     role="tab" data-toggle="tab">Harvest</a></li>
+        </ul>
+      </div>
+
+      <div class="thumbnail-frame mcontent">
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="details">
+            <div class="row">
+              <div class="col-md-12 incontent">
+
+
+                <p class="text-md text-color-4 text-left"><span class="text-color-2"><span class="text-color-4">Fixed Returns</span>: You will get a <span
+                  class="text-color-4">{{user.returns}}%</span> return on investment in 4-6 months </span></p>
+
+                <!--<h1 class="r-bg pull-right"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1>-->
+                <p class="text-md text-color-4 text-left">₹ {{user.requirement}} <span class="text-color-2">goal</span>
+                </p>
+                <p class="text-md text-color-4 text-left">₹ {{user.pledged}} <span class="text-color-2">from</span><br
+                  class="mobile-on"> {{user.investors}} <span class="text-color-2">investors</span></p>
+
+                <hr>
+                <!--<p class="text-color-2"><span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span> Area: 1-->
+                  <!--hectares -&#45;&#45; <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Harvest: 180 days-->
+                <!--</p>-->
+                <!--<p class="text-sm farm-description text-color-2">Mang Crisaldo is a 47-year-old farmer. He has 5-->
+                  <!--children. Among his children, he has 2 who are working and helping with the family income. He owns 1-->
+                  <!--Ha of Palay field. </p>-->
+                <!--<br>-->
+
+                <!--<hr>-->
+                <!--<p class="text-color-2 text-color-2"><span class="glyphicon glyphicon-map-marker"-->
+                                                           <!--aria-hidden="true"></span> Sta. Maria, Laguna, Philippines-->
+                <!--</p>-->
+                <!--<p class="text-sm farm-description text-color-2">Santa María, at 126 km2 is the 3rd largest town in-->
+                  <!--Laguna in terms of land area, after San Pablo City and Calambâ City, followed by Lumbán. It is-->
+                  <!--surrounded by the towns of Tanay (Rizal) on the north-west; Pililla (Rizal) on the west; Mabitac on-->
+                  <!--the south-west, Famy on the southeast (both in Laguna); and Real (Quezon) on the north-east. It is the-->
+                  <!--northernmost town in Laguna. Sta. Maria is the rice capital of Laguna, where it has around 1,000-->
+                  <!--hectares of irrigated riceland in the area. Aside from palay, there are many citrus plants in the area-->
+                  <!--such as dalandan, pomelo and calamansi.</p>-->
+
+                <!--<hr>-->
+                <!--<p class="text-color-2 text-color-2"><i class="fa fa-pencil" aria-hidden="true"></i> Notes to Investor-->
+                <!--</p>-->
+                <!--<p class="text-sm farm-description text-color-2">As loan, farmer is mandated to repay the loan with-->
+                  <!--fixed interest charges. In case of extreme conditions and losses, it is anticipated that farmers will-->
+                  <!--not be able to repay the loan immediately, and might extend the holding/repayment period for the-->
+                  <!--farmer as a consideration for the unfortunate event. <br><br> Insurance is also optional for the-->
+                  <!--farmer.</p>-->
+
+
+              </div>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="updates">
+
+            <p class="text-md text-color-2 center padding-td">No farm updates yet.</p>
+
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="harvest">
+            <p class="text-md text-color-2 center padding-td">No harvest details yet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <br>
+      </div>
+
+      <div class="thumbnail-frame mcontent">
+        <div class="row">
+          <div class="col-md-12 incontent center">
+            <h3 class="text-color-4">Management of Farmers: Improve Productivity and Income</h3>
+            <div class="row">
+              <p class="text-color-2"><strong>With your support to this farmer,</strong> they will be provided with
+                these resources to <br class="mobile-off">improve their productivity and thus increase the profit of the
+                farm.</p>
+              <div class="col-md-3">
+                <img class="icon margin-t-lg" src="assets/images/insurance/farm-funding.png" height="50px">
+                <br><br>
+                <p class="text-color-2">Capital</p>
+              </div>
+              <div class="col-md-3">
+                <img class="icon margin-t-lg" src="assets/images/insurance/farm-market.png" height="50px">
+                <br><br>
+                <p class="text-color-2">Assured Buyer of Crops</p>
+              </div>
+              <div class="col-md-3">
+                <img class="icon margin-t-lg" src="assets/images/insurance/farm-tech.png" height="50px">
+                <br><br>
+                <p class="text-color-2">Latest Technologies incorporated in the farm plan</p>
+              </div>
+              <div class="col-md-3">
+                <img class="icon margin-t-lg" src="assets/images/insurance/farm-insurance.png" height="50px">
+                <br><br>
+                <p class="text-color-2">Crop Insurance</p>
+              </div>
+            </div>
+            <hr>
+
+            <h4 class="text-color-4">Have any questions or need assistance?</h4>
+            <p class="padding">We're here to help! By visiting our <a href="https://www.cropital.com/help">Help
+              Center</a>, you can find the answers to most common questions quickly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>
