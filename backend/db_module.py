@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-mongo_url = "mongodb://127.0.0.1:27017/"
-db_name = "rjhck3"
+mongo_url = "mongodb://dhruv:dhruv@ds125896.mlab.com:25896/cropstarter"
+db_name = "cropstarter"
 
 client = MongoClient(mongo_url)
 db = client[db_name]

@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ShopsService {
 
-  private url = 'http://localhost:5000/';
+  private url = 'http://cropstarter.herokuapp.com/farm/69';
 
   constructor(private http: Http) {
 

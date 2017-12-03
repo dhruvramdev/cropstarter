@@ -1,6 +1,7 @@
 from flask import Flask,request,abort
 import db_module
 import json
+import sys
 
 app = Flask(__name__)
 
@@ -37,5 +38,6 @@ def fetchitems(item_id):
         abort(404)
 
 
-
-app.run('0.0.0.0')
+PORT = int(sys.argv[2])
+if __name__ == '__main__':
+    app.run(port=PORT, debug=True)
