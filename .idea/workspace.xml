@@ -37,8 +37,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="298">
+              <caret line="12" column="412" lean-forward="true" selection-start-line="12" selection-start-column="412" selection-end-line="12" selection-end-column="412" />
               <folding />
             </state>
           </provider>
@@ -50,10 +50,12 @@
     <findStrings>
       <find>cropital</find>
       <find>src=&quot;</find>
+      <find>./</find>
     </findStrings>
     <replaceStrings>
       <replace>CropStarter</replace>
       <replace>src=&quot;./</replace>
+      <replace>cropstarter/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\Dhruv\Desktop\RH3\client</dir>
@@ -144,12 +146,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1512260343677</updated>
-      <workItem from="1512260346248" duration="610000" />
+      <workItem from="1512260346248" duration="720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="610000" />
+    <option name="totallyTimeSpent" value="720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -230,8 +232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="298">
+          <caret line="12" column="412" lean-forward="true" selection-start-line="12" selection-start-column="412" selection-end-line="12" selection-end-column="412" />
           <folding />
         </state>
       </provider>
